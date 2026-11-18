@@ -1,0 +1,259 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* COLORS */
+:root {
+    --color-dark: #171717;
+    --color-gold: #C49A5A;
+    --color-cream: #E9DDCA;
+    --color-brown: #302820;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 7%;
+    z-index: 10;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px 100px;
+
+    
+background-image:
+    linear-gradient(
+        rgba(23, 23, 23, 0.48),
+        rgba(23, 23, 23, 0.72)
+    ),
+    url("C:\\Users\\mgrid\\Desktop\\diverso\\menu website\\assets\\images\\atmosphere\\salle1.jpg");
+
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 500;
+    color: var(--color-gold);
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    color: var(--color-cream);
+}
+
+/* MENU BUTTON */
+.hero a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 35px;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px;
+    background-color: var(--color-dark);
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover img {
+    transform: translateY(-4px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 95px;
+    }
+
+    .hero {
+        padding: 130px 25px 80px;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+    }
+
+    .hero a {
+        padding: 14px 24px;
+        font-size: 0.68rem;
+    }
+}
+
+/* ==============================
+   ABOUT SECTION
+============================== */
+
+.about {
+    min-height: 65vh;
+    padding: 110px 12%;
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    color: var(--color-brown);
+    margin-bottom: 35px;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 1px;
+    background-color: var(--color-gold);
+    margin: 20px auto 0;
+}
+
+.about p {
+    max-width: 760px;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: #494139;
+    margin-bottom: 20px;
+}
+
+/* ABOUT - MOBILE */
+
+@media (max-width: 600px) {
+    .about {
+        min-height: auto;
+        padding: 85px 25px;
+    }
+
+    .about h2 {
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+    }
+
+    .about p {
+        font-size: 0.85rem;
+        line-height: 1.9;
+    }
+}
+/* SOCIAL MEDIA ICONS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.social-icon span {
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.instagram span {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
+    background-color: var(--color-cream);
+}
+
